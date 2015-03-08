@@ -15,6 +15,8 @@ import android.map.longdo.com.htmleditor.R;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.gc.materialdesign.views.ButtonFlat;
+import com.gc.materialdesign.views.ButtonRectangle;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
@@ -37,7 +39,7 @@ public class SourceCodeFragment extends Fragment {
 
     private EditText etURL;
     private EditText etSourceCode;
-    private Button btRequest;
+    private ButtonRectangle btRequest;
     private ProgressDialog pdRequesting;
 
     public static SourceCodeFragment newInstance() {
@@ -69,7 +71,7 @@ public class SourceCodeFragment extends Fragment {
     private void initViews(View view) {
         etURL = (EditText) view.findViewById(R.id.et_url);
         etSourceCode = (EditText) view.findViewById(R.id.et_source_code);
-        btRequest = (Button) view.findViewById(R.id.bt_request);
+        btRequest = (ButtonRectangle) view.findViewById(R.id.bt_request);
 
         String lastURL = FileUtils.loadFile(getActivity(),FILENAME_URL,"");
         String lastSourceCode = FileUtils.loadFile(getActivity(),FILENAME_SOURCE_CODE,"");
@@ -89,14 +91,10 @@ public class SourceCodeFragment extends Fragment {
 
         etURL.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
+            public void onTextChanged(CharSequence s, int start, int before, int count) { }
 
             @Override
             public void afterTextChanged(Editable s) {
@@ -106,14 +104,10 @@ public class SourceCodeFragment extends Fragment {
 
         etSourceCode.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
+            public void onTextChanged(CharSequence s, int start, int before, int count) { }
 
             @Override
             public void afterTextChanged(Editable s) {

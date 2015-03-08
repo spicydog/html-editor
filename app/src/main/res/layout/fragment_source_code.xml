@@ -3,15 +3,16 @@
     android:layout_height="match_parent"
     tools:context="android.map.longdo.com.htmleditor.fragment.SourceCodeFragment">
 
-    <Button
+    <com.gc.materialdesign.views.ButtonRectangle
+        android:id="@+id/bt_request"
+        android:text="@string/Request"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Request"
-        android:id="@+id/bt_request"
+        android:background="@color/accent"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/et_url" />
+        android:layout_alignBottom="@+id/et_url"  />
 
     <EditText
         android:layout_width="wrap_content"
