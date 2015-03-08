@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.map.longdo.com.htmleditor.fragment.SourceCodeFragment">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Request"
+        android:id="@+id/bt_request"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/et_url" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@id/et_url"
+        android:hint="@string/url_default"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@id/bt_request"
+        android:layout_toStartOf="@id/bt_request"
+        android:minHeight="50dp"
+        android:maxLines="5"
+        android:inputType="textNoSuggestions|textVisiblePassword" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_source_code"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@id/bt_request"
+        android:layout_alignEnd="@id/bt_request"
+        android:gravity="start|top"
+        android:textSize="12sp"
+        android:layout_below="@id/et_url"
+        android:background="@android:color/transparent"
+        android:padding="8dp" />
+</RelativeLayout>
