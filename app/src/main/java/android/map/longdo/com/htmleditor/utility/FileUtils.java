@@ -41,9 +41,4 @@ public class FileUtils {
         return data;
     }
 
-    public static void removeFile(String filename, Context context) {
-        context.deleteFile(filename);
-    }
-
-
 }
