@@ -1,6 +1,7 @@
 package android.map.longdo.com.htmleditor.fragment;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,13 +14,12 @@ import android.webkit.WebView;
 
 public class PreviewFragment extends Fragment {
 
+    Context mContext;
+
     private WebView wvPreview;
 
-    public static SourceCodeFragment newInstance() {
-        return new SourceCodeFragment();
-    }
-
-    public PreviewFragment() {
+    public PreviewFragment(Context context) {
+        mContext = context;
     }
 
     @Override

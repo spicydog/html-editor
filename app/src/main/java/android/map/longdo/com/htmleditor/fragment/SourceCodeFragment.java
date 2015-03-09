@@ -2,6 +2,7 @@ package android.map.longdo.com.htmleditor.fragment;
 
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.map.longdo.com.htmleditor.utility.FileUtils;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,10 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.map.longdo.com.htmleditor.R;
-import android.widget.Button;
 import android.widget.EditText;
 
-import com.gc.materialdesign.views.ButtonFlat;
 import com.gc.materialdesign.views.ButtonRectangle;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -24,15 +23,10 @@ import org.apache.http.Header;
 
 import java.nio.charset.Charset;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link SourceCodeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class SourceCodeFragment extends Fragment {
 
-    private static final String ARG_PARAM_HTML = "HTML";
-    private static final String ARG_PARAM_URL = "URL";
+    Context mContext;
+
     private static final String FILENAME_SOURCE_CODE = "last_source_code";
     private static final String FILENAME_URL = "last_url";
 
@@ -42,12 +36,8 @@ public class SourceCodeFragment extends Fragment {
     private ButtonRectangle btRequest;
     private ProgressDialog pdRequesting;
 
-    public static SourceCodeFragment newInstance() {
-        return new SourceCodeFragment();
-    }
-
-    public SourceCodeFragment() {
-        // Required empty public constructor
+    public SourceCodeFragment(Context context) {
+        mContext = context;
     }
 
     @Override
@@ -158,8 +148,27 @@ public class SourceCodeFragment extends Fragment {
     }
 
     public String getSourceCode() {
-
         return etSourceCode!=null ? etSourceCode.getText().toString() : "";
+    }
+
+    public void setSourceCode(String sourceCode) {
+        if(etSourceCode!=null) {
+            etURL.setText("");
+            etSourceCode.setText(sourceCode);
+        } else {
+            FileUtils.saveFile(mContext,FILENAME_URL,"");
+            FileUtils.saveFile(mContext,FILENAME_SOURCE_CODE,sourceCode);
+        }
+    }
+
+    public void setURL(String url) {
+        if(etSourceCode!=null) {
+            etURL.setText(url);
+            etSourceCode.setText("");
+        } else {
+            FileUtils.saveFile(mContext,FILENAME_URL,url);
+            FileUtils.saveFile(mContext,FILENAME_SOURCE_CODE,"");
+        }
     }
 
 }

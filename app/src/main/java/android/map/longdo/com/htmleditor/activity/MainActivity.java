@@ -1,7 +1,10 @@
 package android.map.longdo.com.htmleditor.activity;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Locale;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.FragmentManager;
@@ -12,8 +15,6 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 
 
 public class MainActivity extends ActionBarActivity implements ActionBar.TabListener {
@@ -70,8 +71,24 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         }
 
 
-        mSourceCodeFragment = new SourceCodeFragment();
-        mPreviewFragment = new PreviewFragment();
+        mSourceCodeFragment = new SourceCodeFragment(this);
+        mPreviewFragment = new PreviewFragment(this);
+
+
+        Intent intent = getIntent();
+        String action = intent.getAction();
+        String type = intent.getType();
+
+        if (Intent.ACTION_SEND.equals(action) && type != null) {
+            String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
+            try {
+                URL url = new URL(sharedText);
+                mSourceCodeFragment.setURL(String.valueOf(url));
+            } catch (MalformedURLException e) {
+                mSourceCodeFragment.setSourceCode(sharedText);
+            }
+
+        }
     }
 
 //
