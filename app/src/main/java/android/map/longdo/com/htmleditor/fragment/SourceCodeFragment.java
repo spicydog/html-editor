@@ -1,6 +1,7 @@
 package android.map.longdo.com.htmleditor.fragment;
 
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.map.longdo.com.htmleditor.utility.FileUtils;
@@ -23,6 +24,7 @@ import org.apache.http.Header;
 
 import java.nio.charset.Charset;
 
+@SuppressLint("ValidFragment")
 public class SourceCodeFragment extends Fragment {
 
     Context mContext;

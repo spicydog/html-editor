@@ -1,6 +1,7 @@
 package android.map.longdo.com.htmleditor.fragment;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,7 @@ import android.map.longdo.com.htmleditor.R;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
+@SuppressLint("ValidFragment")
 public class PreviewFragment extends Fragment {
 
     Context mContext;
@@ -36,6 +38,7 @@ public class PreviewFragment extends Fragment {
         return view;
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     private void initViews(View view) {
         wvPreview = (WebView) view.findViewById(R.id.wv_preview);
         WebSettings webSettings = wvPreview.getSettings();
