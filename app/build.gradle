@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "android.map.longdo.com.htmleditor"
+        applicationId "org.spicydog.android.htmleditor"
         minSdkVersion 9
         targetSdkVersion 21
         versionCode 1

@@ -1,4 +1,4 @@
-package android.map.longdo.com.htmleditor.fragment;
+package org.spicydog.android.htmleditor.fragment;
 
 
 import android.annotation.SuppressLint;
@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import android.map.longdo.com.htmleditor.R;
+import org.spicydog.android.htmleditor.R;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 

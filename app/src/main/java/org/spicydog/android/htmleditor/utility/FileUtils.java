@@ -1,4 +1,4 @@
-package android.map.longdo.com.htmleditor.utility;
+package org.spicydog.android.htmleditor.utility;
 
 import android.content.Context;
 

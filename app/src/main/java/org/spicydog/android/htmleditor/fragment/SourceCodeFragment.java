@@ -1,10 +1,10 @@
-package android.map.longdo.com.htmleditor.fragment;
+package org.spicydog.android.htmleditor.fragment;
 
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.map.longdo.com.htmleditor.utility.FileUtils;
+import org.spicydog.android.htmleditor.utility.FileUtils;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
@@ -13,7 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import android.map.longdo.com.htmleditor.R;
+import org.spicydog.android.htmleditor.R;
 import android.widget.EditText;
 
 import com.gc.materialdesign.views.ButtonRectangle;

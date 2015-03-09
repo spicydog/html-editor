@@ -1,4 +1,4 @@
-package android.map.longdo.com.htmleditor.activity;
+package org.spicydog.android.htmleditor.activity;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -8,9 +8,9 @@ import android.content.Intent;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.FragmentManager;
-import android.map.longdo.com.htmleditor.R;
-import android.map.longdo.com.htmleditor.fragment.PreviewFragment;
-import android.map.longdo.com.htmleditor.fragment.SourceCodeFragment;
+import org.spicydog.android.htmleditor.R;
+import org.spicydog.android.htmleditor.fragment.PreviewFragment;
+import org.spicydog.android.htmleditor.fragment.SourceCodeFragment;
 import android.os.Bundle;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
