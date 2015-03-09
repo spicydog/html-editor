@@ -65,7 +65,7 @@ public class SourceCodeFragment extends Fragment {
         etSourceCode = (EditText) view.findViewById(R.id.et_source_code);
         btRequest = (ButtonRectangle) view.findViewById(R.id.bt_request);
 
-        String lastURL = FileUtils.loadFile(getActivity(),FILENAME_URL,"");
+        String lastURL = FileUtils.loadFile(getActivity(),FILENAME_URL,mContext.getResources().getString(R.string.default_url));
         String lastSourceCode = FileUtils.loadFile(getActivity(),FILENAME_SOURCE_CODE,"");
 
         etSourceCode.setText(lastSourceCode);
