@@ -42,4 +42,5 @@
         android:layout_below="@id/et_url"
         android:background="@android:color/transparent"
         android:padding="8dp" />
+
 </RelativeLayout>
