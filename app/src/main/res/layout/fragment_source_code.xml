@@ -3,16 +3,30 @@
     android:layout_height="match_parent"
     tools:context="android.map.longdo.com.htmleditor.fragment.SourceCodeFragment">
 
-    <com.gc.materialdesign.views.ButtonRectangle
-        android:id="@+id/bt_request"
-        android:text="@string/Request"
+
+
+    <com.andexert.library.RippleView
+        android:id="@+id/rv_request"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/accent"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/et_url"  />
+        android:layout_alignBottom="@+id/et_url"
+        rv_centered="true"
+        rv_rippleDuration="50">
+
+        <Button
+            android:id="@+id/bt_request"
+            android:text="@string/Request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/accent"
+            android:textColor="@android:color/white"
+            android:padding="12dp" />
+
+    </com.andexert.library.RippleView>
+
 
     <EditText
         android:layout_width="wrap_content"
@@ -22,8 +36,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@id/bt_request"
-        android:layout_toStartOf="@id/bt_request"
+        android:layout_toLeftOf="@id/rv_request"
+        android:layout_toStartOf="@id/rv_request"
         android:minHeight="50dp"
         android:maxLines="5"
         android:inputType="textNoSuggestions|textVisiblePassword" />
@@ -35,8 +49,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@id/bt_request"
-        android:layout_alignEnd="@id/bt_request"
+        android:layout_alignRight="@id/rv_request"
+        android:layout_alignEnd="@id/rv_request"
         android:gravity="start|top"
         android:textSize="12sp"
         android:layout_below="@id/et_url"

@@ -14,9 +14,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import org.spicydog.android.htmleditor.R;
+
+import android.widget.Button;
 import android.widget.EditText;
 
-import com.gc.materialdesign.views.ButtonRectangle;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
@@ -35,7 +36,7 @@ public class SourceCodeFragment extends Fragment {
 
     private EditText etURL;
     private EditText etSourceCode;
-    private ButtonRectangle btRequest;
+    private Button btRequest;
     private ProgressDialog pdRequesting;
 
     public SourceCodeFragment(Context context) {
@@ -63,7 +64,7 @@ public class SourceCodeFragment extends Fragment {
     private void initViews(View view) {
         etURL = (EditText) view.findViewById(R.id.et_url);
         etSourceCode = (EditText) view.findViewById(R.id.et_source_code);
-        btRequest = (ButtonRectangle) view.findViewById(R.id.bt_request);
+        btRequest = (Button) view.findViewById(R.id.bt_request);
 
         String lastURL = FileUtils.loadFile(getActivity(),FILENAME_URL,mContext.getResources().getString(R.string.default_url));
         String lastSourceCode = FileUtils.loadFile(getActivity(),FILENAME_SOURCE_CODE,"");

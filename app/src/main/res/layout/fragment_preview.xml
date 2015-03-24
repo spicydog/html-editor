@@ -4,9 +4,9 @@
     tools:context="android.map.longdo.com.htmleditor.fragment.PreviewFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
     <WebView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/wv_preview" />
+
 </FrameLayout>
