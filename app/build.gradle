@@ -8,7 +8,7 @@ android {
         applicationId "org.spicydog.android.htmleditor"
         minSdkVersion 9
         targetSdkVersion 21
-        versionCode 2
+        versionCode 3
         versionName "1.1"
     }
     buildTypes {
